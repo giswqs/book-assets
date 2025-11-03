@@ -4,10 +4,10 @@ on:
   # Trigger the workflow on push to main branch
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
   build-and-deploy:
@@ -40,13 +40,13 @@ jobs:
           git config --local user.name "GitHub Action"
           git add -A
           git commit -m "Updated index.html ${today} UTC" -a
-          git pull origin master
+          git pull origin main
       - name: push changes
         continue-on-error: true
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
+          branch: main
       #####################################################
 
       # Deploy the book's HTML to gh-pages branch
