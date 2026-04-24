@@ -44,7 +44,7 @@ def generate_index_html(directories, output_file):
 
 
 # Specify the directories to list
-directories_to_list = ["gispro", "duckdb", "geoai", "gee", "bundle", "courses"]
+directories_to_list = ["gispro", "duckdb", "geoai", "gee", "bundle", "courses", "files"]
 # Specify the output HTML file
 output_html_file = "index.html"
 
